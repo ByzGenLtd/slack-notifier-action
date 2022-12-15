@@ -8,7 +8,8 @@ FROM alpine:latest
 
 RUN apk add curl gettext \
      && apk update \
-     && rm -rf /var/cache/apk/*
+     && rm -rf /var/cache/apk/* \
+     && apk add git
 
 WORKDIR /
 COPY files/slack_notification.json /slack_notification.json

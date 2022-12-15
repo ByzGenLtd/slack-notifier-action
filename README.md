@@ -9,7 +9,7 @@ To add slack notifications to your builds just supply the following in your buil
 ```
   - name: Slack Notification for job status
     if: always()
-    uses: ghcr.io/byzgenltd/slack-notifier-action@0.0.1
+    uses: ghcr.io/byzgenltd/slack-notifier-action@0.0.2
     with:
       slack_webhook: 'https://hooks.slack.com/services/DUMMY_FORMAT/DUMMY/DUMMY'
       job_status: ${{ job.status }}
