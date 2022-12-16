@@ -29,4 +29,4 @@ fi # else cancelled
 git config --global --add safe.directory '/github/workspace'
 export TAG_VERSION=$(git describe --tag --abbrev=0)
 
-curl -X POST -H 'Content-type: application/json' --data "$(envsubst < /slack_notification.json)" "${INPUT_SLACK_WEBHOOK}"
+curl -X POST -H 'Content-type: application/json' --data "$(envsubst < /slack_notification.json)" "${INPUT_SLACK_WEBHOOK}" "${TAG_VERSION}"
