@@ -30,4 +30,4 @@ elif [[ "${INPUT_JOB_STATUS}" == 'failure' ]]; then
 
 fi # else cancelled
 
-curl -X POST -H 'Content-type: application/json' --data "$(envsubst < /slack_notification.json)" "${INPUT_SLACK_WEBHOOK}" "${TAG_VERSION}"
+curl -X POST -H 'Content-type: application/json' --data "$(envsubst < /slack_notification.json)" "${INPUT_SLACK_WEBHOOK}"
